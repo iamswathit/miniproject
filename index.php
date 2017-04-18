@@ -8,24 +8,24 @@
 		
 		if(!$_POST["email"]) {
 			
-			$error .= "An email address is required.<br>";
+			$error .= "The email address cannot be empty.<br>";
 			
 		}
 		
 		if(!$_POST["content"]) {
 			
-			$error .= "The content field is required.<br>";
+			$error .= "The content field cannot be empty.<br>";
 		}
 	
 		if(!$_POST["subject"]) {
 			
-			$error .= "The subject is required.<br>";
+			$error .= "The subject cannot be empty.<br>";
 		}
 		
 		// Validate e-mail
 		if ($_POST['email'] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false) {
 
-		$error .= "The email address is invalid.<br>";
+		$error .= "The entered email address is invalid.<br>";
 		
 		}
 		
